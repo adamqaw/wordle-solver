@@ -19,7 +19,7 @@ Logic:
 - Created Flask app, including db config for future SQLite implementation
 - Created forms for green and yellow letters, along with form for available letters
 - Wrote jinja for possible-words.html to display all possible words, *although still need to implement dictionary API to only show valid words*
-- Added endpoint and headers in main.py for dictionary API *No API KEY yet*
+- Added endpoint and headers in main.py for dictionary API, *No API KEY yet*
 
 ### TODO:
 - Create API key on Merriam-Webster for Collegiate dictionary 
