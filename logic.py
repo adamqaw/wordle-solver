@@ -4,6 +4,8 @@ class Solver:
         self.available_letters = list(available_letters.upper())
         self.indexes_empty = indexes_empty
         
+        # Test case
+        
         # self.word_input = 's*o*t'.upper()
         # self.available_letters = list('qwtyuodfgjkzxcvbnm'.upper())
         # self.indexes_empty = [1, 3]
