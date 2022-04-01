@@ -1,0 +1,11 @@
+{% extends 'bootstrap/base.html' %}
+{% block title %} Possible Words {% endblock %}
+{% block content %}
+
+{{ with open('possible_words.txt', mode='r') as data: }}
+<ul>
+    {{ for i in data: }}
+    <li>{{i}}</li>
+</ul>
+
+{% endblock %}
