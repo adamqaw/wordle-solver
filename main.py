@@ -4,14 +4,7 @@ from flask_bootstrap import Bootstrap
 from forms import Greens, Yellows, AvailableLetters
 import requests
 
-API_KEY = ''
-endpoint = 'https://www.dictionaryapi.com/api/v3/references/collegiate/json/'
-headers = {
-    "word": "",
-    "key": API_KEY,
-           }
-
-response = requests.get(endpoint, params=headers)
+API_KEY = '05a09b32-920e-4ead-8a11-fcf0a809050b'
 
 
 def create_app():
@@ -29,7 +22,11 @@ db = SQLAlchemy(app)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    word = ''
+    endpoint = f'https://www.dictionaryapi.com/api/v3/references/collegiate/json/{word}?key={API_KEY}'
+    response = requests.get(endpoint)
+    word = response.text
+    return render_template('index.html', word=word)
 
 
 @app.route('/possible-words')
